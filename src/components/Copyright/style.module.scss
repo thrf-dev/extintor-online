@@ -1,0 +1,26 @@
+.footer_copy {
+  background-color: #d9d9d9;
+  color: black;
+}
+
+.infos {
+  max-width: 1240px;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  a {
+    margin-left: 0.2rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+}

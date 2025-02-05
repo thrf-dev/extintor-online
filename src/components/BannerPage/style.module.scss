@@ -1,0 +1,18 @@
+.bannerPage {
+  background-image: url("../../assets/images/banner.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+
+.titulo {
+  max-width: 1240px;
+  padding: 3.2rem 2rem;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 2rem;
+    color: white;
+  }
+}

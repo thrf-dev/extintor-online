@@ -1,0 +1,218 @@
+.produto {
+  background-color: white;
+  color: black;
+
+  max-width: 1240px;
+  padding: 0 2rem;
+  margin: 2rem auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulos {
+  h3 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Ajuste para ocupar 100% da largura */
+
+  input {
+    border: 1px solid #aa1919;
+    border-radius: 64px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 400px; /* Limita a largura do input */
+  }
+
+  button {
+    border: none;
+    background: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.categoryFilter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  width: 100%;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  select {
+    border: 1px solid #aa1919;
+    border-radius: 64px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+}
+
+.mainProd {
+  max-width: 1240px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.ProdCards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem; /* Espaçamento entre os cards */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Adicionando margin-bottom aos cards para espaçamento entre eles */
+.ProdCards > div {
+  margin-bottom: 0.5rem; /* Ajuste o valor conforme necessário */
+}
+
+// Responsividade
+
+@media (max-width: 1024px) {
+  .produto {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .searchBar {
+    margin-left: 0;
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .categoryFilter {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .mainProd {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .ProdCards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem; /* Mantendo o espaçamento entre os cards */
+  }
+}
+
+@media (max-width: 768px) {
+  .produto {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .titulos h3 {
+    font-size: 0.7rem;
+  }
+
+  .titulos h2 {
+    font-size: 1.4rem;
+  }
+
+  .searchBar {
+    margin-left: 0;
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .categoryFilter {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .mainProd {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .ProdCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem; /* Mantendo o espaçamento entre os cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .produto {
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .titulos h3 {
+    font-size: 0.6rem;
+  }
+
+  .titulos h2 {
+    font-size: 1.2rem;
+  }
+
+  .searchBar {
+    margin-left: 0;
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .categoryFilter {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .mainProd {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .ProdCards {
+    grid-template-columns: 1fr;
+    gap: 0.5rem; /* Mantendo o espaçamento entre os cards */
+  }
+}

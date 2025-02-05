@@ -1,0 +1,122 @@
+.header {
+  background-color: white;
+  color: black;
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    img {
+      width: 250px;
+    }
+
+    /* Menu padrão (desktop) */
+    .navMenu {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      width: auto;
+      transition: all 0.3s ease-in-out;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        a:hover {
+          color: #aa1919;
+          font-weight: 600;
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        background-color: #aa1919;
+        padding: 0.5rem 0.9rem;
+        border-radius: 90px;
+
+        a {
+          font-size: 1rem;
+          color: white;
+          font-weight: 400;
+          text-decoration: none;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    /* Botão hamburger (mobile) */
+    .hamburger {
+      display: none;
+    }
+
+    /* Configuração responsiva */
+    @media (max-width: 768px) {
+      .navMenu {
+        display: none; /* Oculto por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      .navMenu.active {
+        display: flex; /* Visível apenas quando o menu for ativado */
+      }
+
+      .hamburger {
+        display: flex; /* Visível no mobile */
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
+
+        span {
+          width: 25px;
+          height: 3px;
+          background: black;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+        }
+
+        &.open span:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        &.open span:nth-child(2) {
+          opacity: 0; /* O segundo traço desaparece quando o menu é aberto */
+        }
+
+        &.open span:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
